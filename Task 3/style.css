@@ -3,9 +3,6 @@
     padding: 0;
 }
 
-:root {
-    --primary-color: #1bc87d;
-}
 
 body {
     display: grid;
