@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #1bc87d;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #e0e0e0;
+    overflow: hidden;
+  
+    
+}
+
+.bgimg{
+    background-image: url('images/night.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: change 10s infinite ;
+}
+
+
+.temp-container {
+    min-width: 530px;
+    width: 40vw;
+    min-height: 340px;
+    height: 54vh;
+    border-radius: 36px;
+    background-color: #f0eee1;
+    box-shadow: 5px 5px 9px #a4a4a4, -5px -5px 9px #ffffff;
+    padding: 20px 20px;
+    margin: 20px;
+    /* opacity: 83%; */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: rgb(243, 30, 30);
+    font-size: 45px;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 31px;
+    margin: 20px;
+}
+
+.fa-temperature-high {
+    font-size: 70px;
+}
+
+.text-symbol {
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* color: var(--primary-color); */
+    color: #0b975b;
+    
+    padding: 0px 20px;
+    font-size: 60px;
+    margin: 15px 0px;
+    border-radius: 36px;
+    box-shadow: inset 6px 6px 4px #c5c5c5, inset -6px -6px 4px white;
+}
+
+.temp_icon {
+    font-size: 70px;
+}
+
+.input_temperature {
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+input {
+    padding: 15px;
+    margin-top: 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 36px;
+    box-shadow: inset 6px 6px 4px #c5c5c5, inset -6px -6px 4px #fbfbfb;
+    outline: none;
+    background-color: #e0e0e0;
+}
+ 
+.text_celsius,
+.text_fahrenheit,
+.text_kelvin{
+    font-size: 25px;
+    display: block;
+    text-align: center;
+    /* color: var(--primary-color); */
+    color: rgb(234, 59, 11);
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+
+
+@media (max-width:1052px) {
+    .temp-container{
+        min-width: 400px;
+        height: 80%;
+        justify-content: center;
+        align-items: center;
+        /* padding: auto; */
+        padding-right: 30px;
+    }
+    .header{
+        font-size: 25px;
+        padding: auto;
+        /* display: none; */
+    }
+    .fa-temperature-high{
+        font-size: 50px;
+    }
+    .text-symbol{
+        height: auto;
+        display: none;
+    }
+    .temp_icon{
+        font-size: 40px;
+    }
+    .input_temperature{
+        
+        flex-direction: column;
+        align-items: flex-start;
+        padding-right: 0px;
+        margin-top: 100px;
+    }
+    .celsius,.fahrenheit,.kelvin,input{
+        width: 100%;
+        padding-right: -0px;
+    }
+    @media(max-width: 433px)
+    {
+        .temp-container{
+            min-width: 300px;
+        }
+    }
+}
